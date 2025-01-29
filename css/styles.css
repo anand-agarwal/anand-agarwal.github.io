@@ -1,19 +1,30 @@
 /* General Reset */
-body, h1, h2, p, ul {
+h1 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 30px;
+}
+
+body, h2, p, ul {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 500;
   }
   
   body {
-    background-color: #E0E0E2;
-    color: #416788;
-    line-height: 1.6;
+    background-image: url("image.png"); /* Path to the image */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Makes the background stay fixed during scrolling */
+  background-position: center; /* Centers the image */
+  color: #416788; 
   }
   
   header {
-    background-color: #7389AE;
+    background-color: 0d1b2a;
     color: white;
+    font-size: 40;
     padding: 1rem 0;
   }
   
@@ -21,12 +32,15 @@ body, h1, h2, p, ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    width:100;
+    height: 50;
   }
   
   .nav-bar li {
     margin: 0 1rem;
+    width: 300;
   }
-  
+
   .nav-bar a {
     color: white;
     text-decoration: none;
@@ -39,6 +53,7 @@ body, h1, h2, p, ul {
   .section {
     padding: 2rem;
     text-align: center;
+    color: white;
   }
   
   .card-container {
@@ -46,20 +61,25 @@ body, h1, h2, p, ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+
+
   }
   
   .card {
-    background-color: #81D2C7;
-    color: #416788;
+    background-color: rgba(144, 150, 29, 0.285);
+    color: white; /* Fixed: Added # for valid hex color */
     padding: 1rem;
-    border-radius: 8px;
-    width: 250px;
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-  }
+    text-align: center;
+    font-family:'Courier New'; /* Optional: Added monospace fallback */
+}
+
   
   footer {
-    background-color: #B5BAD0;
+    background-color: 778DA9;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -67,3 +87,77 @@ body, h1, h2, p, ul {
     bottom: 0;
     width: 100%;
   }
+
+  
+  .tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    color: white;
+    
+}
+
+.tech-icons i {
+    font-size: 4rem;
+    color: white !important;
+    filter: invert(100%) brightness(200%); /* Ensures icons match site color */
+}
+
+.custom-tech-icon {
+    width: 60px; /* Adjust for SVG */
+    height: auto;
+    filter: invert(100%) brightness(200%); /* Match theme color */
+}
+
+.white-icon {
+  color: white !important;
+  filter: brightness(0) invert(1);
+}
+
+
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 70px; /* Space between image and text */
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.profile-img {
+  width: 300px; /* Adjust size */
+  height: 300px;
+  border-radius: 50%; /* Circular frame */
+  object-fit: cover; /* Ensures the image is properly cropped */
+  border: 3px solid #416788; /* Optional border color */
+}
+
+.about-text {
+  max-width: 700px;
+  text-align: left;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between; /* Push GitHub link to the right */
+  align-items: center;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.project-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.project-header a {
+  text-decoration: none;
+}
+
+.project-header img {
+  width: 30px; /* Adjust GitHub icon size */
+  height: 30px;
+}
